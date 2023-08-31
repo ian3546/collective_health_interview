@@ -11,16 +11,16 @@ CREATE OR REPLACE TABLE curated_data.case_details AS
 -- Question #1a Join primary raw data together
 WITH cases AS (
 SELECT
- r.rf_id,
- r.create_date AS rf_create_date,
- r.rf_source,
- e.ec_id,
- e.create_date_time AS ec_create_date_time,
- o.op_id,
- o.create_date_time AS op_create_date_time,
- o.priority,
- o.percent_complete,
- o.category
+  r.rf_id,
+  r.create_date AS rf_create_date,
+  r.rf_source,
+  e.ec_id,
+  e.create_date_time AS ec_create_date_time,
+  o.op_id,
+  o.create_date_time AS op_create_date_time,
+  o.priority,
+  o.percent_complete,
+  o.category
 FROM
   sample_data.referrals_raw AS r
 LEFT JOIN
@@ -40,7 +40,7 @@ SELECT
   -- Question #3 Calculates # of opportunities per engagement
   COUNT(op_id) OVER(PARTITION BY ec_id) AS opportunities_per_engagement
 FROM
- cases
+  cases
 WHERE
   -- Question #1a Filter final data to a limited referal date range
   rf_create_date > DATE(2021, 03, 01)
@@ -48,5 +48,4 @@ WHERE
 
 -- Grant statements provide access
 GRANT `roles/bigquery.dataViewer` ON TABLE curated_data.case_details TO 
-  "user:radhika.aggarwal@collectivehealth.com",
-  "user:sstronge22@gmail.com";
+  "user:radhika.aggarwal@collectivehealth.com"
