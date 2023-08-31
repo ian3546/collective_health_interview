@@ -1,3 +1,4 @@
+```sql
 /* Add curation and business logic on top of raw table imports
 
 inputs: sample_data.referrals_raw,
@@ -50,3 +51,4 @@ WHERE
 GRANT `roles/bigquery.dataViewer` ON TABLE curated_data.case_details TO 
   "user:radhika.aggarwal@collectivehealth.com",
   "user:sstronge22@gmail.com";
+```
