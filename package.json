@@ -1,0 +1,6 @@
+{
+  "name": "collective_health_interview",
+  "dependencies": {
+    "@dataform/core": "2.4.2"
+  }
+}
