@@ -56,12 +56,12 @@ OPTIONS (
 -- Grant statements provide access
 GRANT `roles/bigquery.dataViewer` ON TABLE sample_data.referrals_raw TO 
   "user:radhika.aggarwal@collectivehealth.com",
-  "user:sstronge22@gmail.com";
+  "user:omar.vidaure@collectivehealth.com";
 
 GRANT `roles/bigquery.dataViewer` ON TABLE sample_data.engagement_cases_raw TO 
   "user:radhika.aggarwal@collectivehealth.com",
-  "user:sstronge22@gmail.com";
+  "user:omar.vidaure@collectivehealth.com";
 
 GRANT `roles/bigquery.dataViewer` ON TABLE sample_data.opportunities_raw TO 
   "user:radhika.aggarwal@collectivehealth.com",
-  "user:sstronge22@gmail.com";
+  "user:omar.vidaure@collectivehealth.com";
