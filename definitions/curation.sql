@@ -48,4 +48,5 @@ WHERE
 
 -- Grant statements provide access
 GRANT `roles/bigquery.dataViewer` ON TABLE curated_data.case_details TO 
-  "user:radhika.aggarwal@collectivehealth.com"
+  "user:radhika.aggarwal@collectivehealth.com",
+  "user:omar.vidaure@collectivehealth.com"
